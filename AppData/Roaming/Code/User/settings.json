@@ -1,0 +1,264 @@
+{
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.gz": true,
+        "**/*.out": true,
+        "**/*.synctex(busy)": true,
+        "**/*.tcp": true,
+        "**/*.toc": true,
+        "**/*.tps": true
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2pdf",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::knit2pdf('%DOCFILE%')"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex ➞ bibtex ➞ xelatex × 2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2pdf"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+	"latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run" : "onBuilt",
+    "workbench.statusBar.visible": true,
+    
+    "prettifySymbolsMode.revealOn": "cursor",
+    "prettifySymbolsMode.adjustCursorMovement": true,
+    "prettifySymbolsMode.substitutions": [{
+      "language": "latex",
+      "revealOn": "selection",
+      "substitutions": [
+        { "ugly": "\\\\alpha",           "pretty": "α" },
+        { "ugly": "\\\\beta",            "pretty": "β" },
+        { "ugly": "\\\\gamma",           "pretty": "γ" },
+        { "ugly": "\\\\delta",           "pretty": "δ" },
+        { "ugly": "\\\\epsilon",         "pretty": "ϵ" },
+        { "ugly": "\\\\varepsilon",      "pretty": "ε" },
+        { "ugly": "\\\\zeta",            "pretty": "ζ" },
+        { "ugly": "\\\\eta",             "pretty": "η" },
+        { "ugly": "\\\\theta",           "pretty": "θ" },
+        { "ugly": "\\\\vartheta",        "pretty": "ϑ" },
+        { "ugly": "\\\\iota",            "pretty": "ι" },
+        { "ugly": "\\\\kappa",           "pretty": "κ" },
+        { "ugly": "\\\\varkappa",        "pretty": "ϰ" },
+        { "ugly": "\\\\lambda",          "pretty": "λ" },
+        { "ugly": "\\\\mu",              "pretty": "μ" },
+        { "ugly": "\\\\nu",              "pretty": "ν" },
+        { "ugly": "\\\\xi",              "pretty": "ξ" },
+        { "ugly": "\\\\omikron",         "pretty": "o" },
+        { "ugly": "\\\\pi",              "pretty": "π" },
+        { "ugly": "\\\\varpi",           "pretty": "ϖ" },
+        { "ugly": "\\\\rho",             "pretty": "ρ" },
+        { "ugly": "\\\\varrho",          "pretty": "ϱ" },
+        { "ugly": "\\\\sigma",           "pretty": "σ" },
+        { "ugly": "\\\\varsigma",        "pretty": "ς" },
+        { "ugly": "\\\\tau",             "pretty": "τ" },
+        { "ugly": "\\\\upsilon",         "pretty": "υ" },
+        { "ugly": "\\\\phi",             "pretty": "φ" },
+        { "ugly": "\\\\varphi",          "pretty": "ϕ" },
+        { "ugly": "\\\\chi",             "pretty": "χ" },
+        { "ugly": "\\\\psi",             "pretty": "ψ" },
+        { "ugly": "\\\\omega",           "pretty": "ω" },
+        { "ugly": "\\\\Alpha",           "pretty": "Α" },
+        { "ugly": "\\\\Beta",            "pretty": "Β" },
+        { "ugly": "\\\\Gamma",           "pretty": "Γ" },
+        { "ugly": "\\\\Delta",           "pretty": "Δ" },
+        { "ugly": "\\\\Epsilon",         "pretty": "Ε" },
+        { "ugly": "\\\\Zeta",            "pretty": "Ζ" },
+        { "ugly": "\\\\Eta",             "pretty": "Η" },
+        { "ugly": "\\\\Theta",           "pretty": "Θ" },
+        { "ugly": "\\\\Iota",            "pretty": "Ι" },
+        { "ugly": "\\\\Kappa",           "pretty": "Κ" },
+        { "ugly": "\\\\Lambda",          "pretty": "Λ" },
+        { "ugly": "\\\\Mu",              "pretty": "Μ" },
+        { "ugly": "\\\\Nu",              "pretty": "Ν" },
+        { "ugly": "\\\\Xi",              "pretty": "Ξ" },
+        { "ugly": "\\\\Omikron",         "pretty": "O" },
+        { "ugly": "\\\\Pi",              "pretty": "Π" },
+        { "ugly": "\\\\Rho",             "pretty": "Ρ" },
+        { "ugly": "\\\\Sigma",           "pretty": "Σ" },
+        { "ugly": "\\\\Tau",             "pretty": "Τ" },
+        { "ugly": "\\\\Upsilon",         "pretty": "Υ" },
+        { "ugly": "\\\\Phi",             "pretty": "Φ" },
+        { "ugly": "\\\\Chi",             "pretty": "Χ" },
+        { "ugly": "\\\\Psi",             "pretty": "Ψ" },
+        { "ugly": "\\\\Omega",           "pretty": "Ω" },
+        { "ugly": "\\\\rightarrow",      "pretty": "→" },
+        { "ugly": "\\\\equiv",           "pretty": "≡" },
+        { "ugly": "\\\\forall",          "pretty": "∀" },
+        { "ugly": "\\\\lnot",            "pretty": "¬" },
+        { "ugly": "\\\\sum",             "pretty": "Σ" },
+        { "ugly": "\\\\implies",         "pretty": "⇒" },
+        { "ugly": "\\\\iff",             "pretty": "⇔" },
+        { "ugly": "\\\\emptyset",        "pretty": "∅" },
+        { "ugly": "\\\\in",              "pretty": "∈", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\subset",          "pretty": "⊂", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\cup",             "pretty": "∪", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\cap",             "pretty": "∩", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\subseteq",        "pretty": "⊆" },
+        { "ugly": "\\\\neq",             "pretty": "≠" },
+        { "ugly": "\\\\exists",          "pretty": "∃" },
+        { "ugly": "\\\\mid",             "pretty": "|" },
+        { "ugly": "\\\\land",            "pretty": "∧" },
+        { "ugly": "\\\\lor",             "pretty": "∨" },
+        { "ugly": "\\\\cdot",            "pretty": "·" },
+        { "ugly": "\\\\to",              "pretty": "→" },
+        { "ugly": "\\\\infty",           "pretty": "∞" },
+        { "ugly": "\\\\geq",             "pretty": "≥" },
+        { "ugly": "\\\\leq",             "pretty": "≤" },
+        { "ugly": "\\\\int",             "pretty": "∫" },
+        { "ugly": "\\\\iint",            "pretty": "∫∫" },
+        { "ugly": "\\\\C",               "pretty": "ℂ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\R",               "pretty": "ℝ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\N",               "pretty": "ℕ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\Q",               "pretty": "ℚ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\Z",               "pretty": "ℤ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\mathbb\\{C\\}",   "pretty": "ℂ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\mathbb\\{R\\}",   "pretty": "ℝ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\mathbb\\{N\\}",   "pretty": "ℕ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\mathbb\\{Q\\}",   "pretty": "ℚ", "post": "(?!\\w)|$" },
+        { "ugly": "\\\\mathbb\\{Z\\}",   "pretty": "ℤ", "post": "(?!\\w)|$" }
+    ]
+}
+],
+"rewrap.autoWrap.enabled": true,
+"editor.minimap.enabled": false,
+"latex-workshop.synctex.afterBuild.enabled": true,
+"editor.columnSelection": false,
+"window.restoreWindows": "none",
+"d.servedPath": "C:\\Users\\Admin\\AppData\\Roaming\\code-d\\bin\\serve-d.exe",
+"debug.allowBreakpointsEverywhere": true,
+"d.dubCompiler": "ldc2",
+"editor.wordWrap": "on",
+"liveshare.audio.joinCallBehavior": "accept",
+"python.defaultInterpreterPath": "C:\\Program Files\\Python39\\python.exe",
+"workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+}
+}
