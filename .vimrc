@@ -1,4 +1,8 @@
-" Install Vim-plug on vim startup if it doesn't exist
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Install Vim-plug on vim startup if it doesn't exist.
 if empty(glob("~/.vim/autoload/plug.vim"))
     execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
@@ -49,6 +53,10 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " :edit a folder to open a file browser
 " <CR>/v/t to open in an h-split/vsplit/tab
 " check |netrw-browse-maps| for more mappings
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Plugins that are installed by Vim-plug
 " :PlugInstall to install plugins (need reload vim after this)
@@ -114,5 +122,22 @@ Plug 'christoomey/vim-titlecase'
 " Highlights patterns and ranges for Ex commands in Command-line mode. It also provides live preview for :substitute.
 Plug 'markonm/traces.vim'
 
+" File system explorer.
+" For help :NERDTree and then ? or :help NERDTree.
+Plug 'preservim/nerdtree'
+
+" Statusline.
+Plug 'itchyny/lightline.vim'
+
 call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins-related settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:lightline = {
+	\ 'colorscheme': 'wombat',
+	\ }
+
+set noshowmode " Mode is displayed in lightline.
 
