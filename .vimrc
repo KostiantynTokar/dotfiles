@@ -141,3 +141,7 @@ let g:lightline = {
 
 set noshowmode " Mode is displayed in lightline.
 
+if !has('gui_running') " Enable colors for lightline
+	set t_Co=256
+endif
+
