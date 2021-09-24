@@ -16,6 +16,8 @@ set number
 set relativenumber
 set showcmd
 
+set laststatus=2 " Always show status line.
+
 set splitright
 set splitbelow
 
