@@ -24,9 +24,16 @@ set splitbelow
 set formatoptions-=cro " Disable continuation of comments on next line.
 
 " <leader> by default is a '\'
-" Creates empty line below and above of current line
+" Creates empty line below and above of current line.
 nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
 nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
+
+" Open new buffer in horizontal split: <C-w>n or :new.
+" Open new buffer in horizontal split: :vnew. But <C-w>v opens existing buffer
+" in horizontal split.
+
+" Creates new buffer in vertical split.
+nnoremap <leader>v :vnew<CR>
 
 " Search down into subfolders
 " Provides tab-complition for all file-related tasks
