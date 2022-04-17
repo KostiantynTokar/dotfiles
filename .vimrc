@@ -128,6 +128,7 @@ source ~/.vim/plugins/itchyny/lightline.vim.vim
 source ~/.vim/plugins/airblade/vim-current-search-match.vim
 source ~/.vim/plugins/editorconfig/editorconfig-vim.vim
 source ~/.vim/plugins/dracula/vim.vim
+source ~/.vim/plugins/voldikss/vim-floaterm.vim
 
 call plug#end()
 doautocmd User PlugLoaded
