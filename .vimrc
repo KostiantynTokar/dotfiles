@@ -12,18 +12,49 @@ set nocompatible
 syntax enable
 filetype plugin on
 
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set hidden
+" set signcolumn=yes:2
 set number
 set relativenumber
 set showcmd
-
-set laststatus=2 " Always show status line.
-
+" set termguicolors
+set undofile
+" set spell
+set title
+set ignorecase
+set smartcase
+set wildmode=longest:full,full
+set nowrap
+set list
+set listchars=tab:►\ ,trail:·
+set mouse=a
+set scrolloff=16
+set sidescrolloff=16
+set nojoinspaces
 set splitright
 set splitbelow
+" set clipboard=unnamedplus
+set confirm
+set exrc
+" set backup
+" set backupdir=~/backup/vim//
+set updatetime=750
+set redrawtime=10000
+set hlsearch
+
+set laststatus=2 " Always show status line.
 
 set formatoptions-=cro " Disable continuation of comments on next line.
 
 " <leader> by default is a '\'
+let mapleader="\<space>"
+
+nmap <leader>k :nohlsearch<CR>
+nmap <leader>Q :bufdo bdelete<CR>
+
 " Creates empty line below and above of current line.
 nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
 nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
@@ -34,6 +65,11 @@ nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1
 
 " Creates new buffer in vertical split.
 nnoremap <leader>v :vnew<CR>
+
+map gf :edit <cfile><CR>
+
+vnoremap < <gv
+vnoremap > >gv
 
 " Search down into subfolders
 " Provides tab-complition for all file-related tasks
@@ -93,6 +129,8 @@ Plug 'tpope/vim-repeat'
 " ss<char> means whole line.
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-fugitive'
+
 " Dependency of the following plugins for new objects.
 Plug 'kana/vim-textobj-user'
 " ae - entire buffer, ie - entire buffer without leading and trailing empty lines.
@@ -138,6 +176,8 @@ Plug 'preservim/nerdtree'
 " Statusline.
 Plug 'itchyny/lightline.vim'
 
+Plug 'airblade/vim-current-search-match'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -153,4 +193,6 @@ set noshowmode " Mode is displayed in lightline.
 if !has('gui_running') " Enable colors for lightline
 	set t_Co=256
 endif
+
+let g:current_search_match='Pmenu'
 
