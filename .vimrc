@@ -12,6 +12,7 @@ set nocompatible
 syntax enable
 filetype plugin on
 
+set encoding=UTF-8
 set expandtab
 set shiftwidth=4
 set tabstop=4
