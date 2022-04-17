@@ -39,8 +39,8 @@ set splitbelow
 " set clipboard=unnamedplus
 set confirm
 set exrc
-" set backup
-" set backupdir=~/backup/vim//
+set backup
+set backupdir=~/.vim/tmp//,.
 set updatetime=750
 set redrawtime=10000
 set hlsearch
