@@ -66,7 +66,7 @@ nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1
 " Creates new buffer in vertical split.
 nnoremap <leader>v :vnew<CR>
 
-map gf :edit <cfile><CR>
+map gf :vsplit <cfile><CR>
 
 vnoremap < <gv
 vnoremap > >gv
@@ -110,89 +110,22 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " :PlugClean to delete plugins
 call plug#begin('~/.vim/plugged')
 
-" Toggle comments.
-" Use gcc to comment out a line (takes a count),
-" gc to comment out the target of a motion (for example, gcap to comment out a paragraph),
-" gc in visual mode to comment out the selection,
-" and gc in operator pending mode to target a comment.
-" gcgc uncomments a set of adjacent commented lines.
-" You can also use it as a command, either with a range like :7,17Commentary, or as part of a
-" :global invocation like with :g/pattern/Commentary.
-Plug 'tpope/vim-commentary'
-
-" Repeat with . with commands from some plugins.
-Plug 'tpope/vim-repeat'
-
-" New object - s<char> for surround, where char is ', \", (, [, {, <tag>, t (for html tag).
-" Use closing brackets for surround with spaces.
-" y<object>s<char> to create, cs<char><char> to change, ds<char> to delete surround.
-" ss<char> means whole line.
-Plug 'tpope/vim-surround'
-
-Plug 'tpope/vim-fugitive'
-
-" Dependency of the following plugins for new objects.
-Plug 'kana/vim-textobj-user'
-" ae - entire buffer, ie - entire buffer without leading and trailing empty lines.
-Plug 'kana/vim-textobj-entire'
-" ai, ii, aI, iI.
-Plug 'kana/vim-textobj-indent'
-" al - entire line, il - entire line without leading and trailing whitespaces.
-Plug 'kana/vim-textobj-line'
-
-" [count]["x]gr{motion}   Replace {motion} text with the contents of register x.
-"                         Especially when using the unnamed register, this is
-"                         quicker than \"_d{motion}P or \"_c{motion}<C-R>\"
-" [count]["x]grr          Replace [count] lines with the contents of register x.
-"                         To replace from the cursor position to the end of the
-"                         line use ["x]gr$
-" {Visual}["x]gr          Replace the selection with the contents of register x.
-Plug 'vim-scripts/ReplaceWithRegister'
-
-" gc<motion> to sort lines.
-" If motion is inside the line, command will attemptr to sort it as comma-separated list.
-" For example, gsi( - sort inside parenthesis.
-Plug 'christoomey/vim-sort-motion'
-
-" cp<motion> for copying and cv<motion> for pasting to system clipboard. cP and CV for whole line.
-" cpiw - copy inside word
-" cpi' - copy inside single quotes
-" cvi' - paste inside single quotes
-Plug 'christoomey/vim-system-copy'
-
-" The gt mapping will wait for a text object or motion before completing the titlecase operation.
-" This means gti' will titlecase inside of single quotes, gtap will titlecase a paragraph, etc.
-" gt will also work on a visual selection.
-" gT will titlecase the current line.
-Plug 'christoomey/vim-titlecase'
-
-" Highlights patterns and ranges for Ex commands in Command-line mode. It also provides live preview for :substitute.
-Plug 'markonm/traces.vim'
-
-" File system explorer.
-" For help :NERDTree and then ? or :help NERDTree.
-Plug 'preservim/nerdtree'
-
-" Statusline.
-Plug 'itchyny/lightline.vim'
-
-Plug 'airblade/vim-current-search-match'
+source ~/.vim/plugins/tpope/vim-commentary.vim
+source ~/.vim/plugins/tpope/vim-repeat.vim
+source ~/.vim/plugins/tpope/vim-surround.vim
+source ~/.vim/plugins/tpope/vim-fugitive.vim
+source ~/.vim/plugins/kana/vim-textobj-user.vim
+source ~/.vim/plugins/kana/vim-textobj-entire.vim
+source ~/.vim/plugins/kana/vim-textobj-indent.vim
+source ~/.vim/plugins/kana/vim-textobj-line.vim
+source ~/.vim/plugins/vim-scripts/ReplaceWithRegister.vim
+source ~/.vim/plugins/christoomey/vim-sort-motion.vim
+source ~/.vim/plugins/christoomey/vim-system-copy.vim
+source ~/.vim/plugins/christoomey/vim-titlecase.vim
+source ~/.vim/plugins/markonm/traces.vim.vim
+source ~/.vim/plugins/preservim/nerdtree.vim
+source ~/.vim/plugins/itchyny/lightline.vim.vim
+source ~/.vim/plugins/airblade/vim-current-search-match.vim
+source ~/.vim/plugins/editorconfig/editorconfig-vim.vim
 
 call plug#end()
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins-related settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:lightline = {
-	\ 'colorscheme': 'wombat',
-	\ }
-
-set noshowmode " Mode is displayed in lightline.
-
-if !has('gui_running') " Enable colors for lightline
-	set t_Co=256
-endif
-
-let g:current_search_match='Pmenu'
-
