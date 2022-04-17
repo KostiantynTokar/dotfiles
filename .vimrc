@@ -20,7 +20,7 @@ set hidden
 set number
 set relativenumber
 set showcmd
-" set termguicolors
+set termguicolors
 set undofile
 " set spell
 set title
@@ -127,5 +127,7 @@ source ~/.vim/plugins/preservim/nerdtree.vim
 source ~/.vim/plugins/itchyny/lightline.vim.vim
 source ~/.vim/plugins/airblade/vim-current-search-match.vim
 source ~/.vim/plugins/editorconfig/editorconfig-vim.vim
+source ~/.vim/plugins/dracula/vim.vim
 
 call plug#end()
+doautocmd User PlugLoaded
