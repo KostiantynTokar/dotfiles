@@ -57,8 +57,8 @@ nmap <leader>k :nohlsearch<CR>
 nmap <leader>Q :bufdo bdelete<CR>
 
 " Creates empty line below and above of current line.
-nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
-nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
+nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>j
+nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>k
 
 " Open new buffer in horizontal split: <C-w>n or :new.
 " Open new buffer in horizontal split: :vnew. But <C-w>v opens existing buffer
