@@ -55,8 +55,8 @@ set formatoptions-=cro " Disable continuation of comments on next line.
 " <leader> by default is a '\'
 let mapleader="\<space>"
 
-nmap <leader>k :nohlsearch<CR>
-nmap <leader>Q :bufdo bdelete<CR>
+nmap <leader>sc :nohlsearch<CR>
+nmap <leader>bd :bufdo bdelete<CR>
 
 " Creates empty line below and above of current line.
 nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>j
