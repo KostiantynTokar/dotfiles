@@ -3,9 +3,14 @@ Plug 'itchyny/lightline.vim'
 
 let g:lightline = {
     \ 'colorscheme': 'wombat',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             ['fugitive', 'readonly', 'filename', 'modified' ] ],
+    \ },
     \ 'component_function': {
     \   'filetype': 'LightlineFiletype',
     \   'fileformat': 'LightlineFileformat',
+    \   'fugitive': 'FugitiveHead',
     \ },
     \ 'separator': { 'left': '', 'right': '' },
     \ 'subseparator': { 'left': '', 'right': '' },
