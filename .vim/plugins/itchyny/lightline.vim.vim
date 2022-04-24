@@ -4,18 +4,18 @@ Plug 'itchyny/lightline.vim'
 let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ 'component_function': {
-    \   'filetype': 'MyFiletype',
-    \   'fileformat': 'MyFileformat',
+    \   'filetype': 'LightlineFiletype',
+    \   'fileformat': 'LightlineFileformat',
     \ },
     \ 'separator': { 'left': '', 'right': '' },
     \ 'subseparator': { 'left': '', 'right': '' },
     \ }
 
-function! MyFiletype()
+function! LightlineFiletype()
     return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
 
-function! MyFileformat()
+function! LightlineFileformat()
     return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
