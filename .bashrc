@@ -108,6 +108,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 alias git-dotfiles='git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
+alias vim-dotfiles='GIT_DIR=$HOME/dotfiles.git GIT_WORK_TREE=$HOME vim'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
