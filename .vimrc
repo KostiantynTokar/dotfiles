@@ -71,7 +71,7 @@ nnoremap <leader>v :vnew<CR>
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
-map gf :vsplit <cfile><CR>
+map gf :edit <cfile><CR>
 
 vnoremap < <gv
 vnoremap > >gv
