@@ -20,6 +20,8 @@ set hidden
 " set signcolumn=yes:2
 set number
 set relativenumber
+autocmd FileType help  setlocal number
+autocmd FileType help  setlocal relativenumber
 set showcmd
 set termguicolors
 set undofile
