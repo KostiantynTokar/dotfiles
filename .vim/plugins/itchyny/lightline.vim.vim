@@ -7,6 +7,8 @@ let g:lightline = {
     \   'filetype': 'MyFiletype',
     \   'fileformat': 'MyFileformat',
     \ },
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' },
     \ }
 
 function! MyFiletype()
