@@ -5,7 +5,9 @@ let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
-    \             ['fugitive', 'readonly', 'filename', 'modified' ] ],
+    \             [ 'readonly', 'filename', 'modified' ],
+    \             [ 'fugitive' ],
+    \           ],
     \ },
     \ 'component_function': {
     \   'filetype': 'LightlineFiletype',
