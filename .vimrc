@@ -17,7 +17,7 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set hidden
-" set signcolumn=yes:2
+set signcolumn=number
 set number
 set relativenumber
 autocmd FileType help  setlocal number
@@ -42,18 +42,22 @@ set splitbelow
 " set clipboard=unnamedplus
 set confirm
 set exrc
-set backup
-set backupdir=~/.vim/tmp//,.
-set updatetime=750
+" set backup
+" set backupdir=~/.vim/tmp//,.
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
 set redrawtime=10000
 set hlsearch
+set shortmess+=c
 
 set laststatus=2 " Always show status line.
 
 set formatoptions-=cro " Disable continuation of comments on next line.
 
 " <leader> by default is a '\'
-let mapleader="\<space>"
+let mapleader=";"
 
 nmap <leader>sc :nohlsearch<CR>
 nmap <leader>bd :bufdo bdelete<CR>
@@ -69,9 +73,9 @@ nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1
 " Creates new buffer in vertical split.
 nnoremap <leader>v :vnew<CR>
 
-" Swtich buffers with tab and shift+tab.
-nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+" Swtich buffers with leader+tab and leader+shift+tab.
+nnoremap  <silent> <leader>bn :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <leader>bp :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 map gf :edit <cfile><CR>
 
@@ -130,6 +134,7 @@ source ~/.vim/plugins/christoomey/vim-sort-motion.vim
 source ~/.vim/plugins/christoomey/vim-system-copy.vim
 source ~/.vim/plugins/christoomey/vim-titlecase.vim
 source ~/.vim/plugins/markonm/traces.vim.vim
+source ~/.vim/plugins/neoclide/coc.nvim.vim
 source ~/.vim/plugins/itchyny/lightline.vim.vim
 source ~/.vim/plugins/bling/vim-bufferline.vim
 source ~/.vim/plugins/preservim/nerdtree.vim

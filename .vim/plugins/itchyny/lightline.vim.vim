@@ -6,13 +6,15 @@ let g:lightline = {
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'readonly', 'filename', 'modified' ],
-    \             [ 'fugitive' ],
+    \             [ 'fugitive', 'cocstatus', 'coccurrentfunction' ],
     \           ],
     \ },
     \ 'component_function': {
     \   'filetype': 'LightlineFiletype',
     \   'fileformat': 'LightlineFileformat',
     \   'fugitive': 'FugitiveHead',
+    \   'cocstatus': 'coc#status',
+    \   'coccurrentfunction': 'LightlineCurrentFunction',
     \ },
     \ 'separator': { 'left': '', 'right': '' },
     \ 'subseparator': { 'left': '', 'right': '' },
@@ -24,6 +26,10 @@ endfunction
 
 function! LightlineFileformat()
     return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
+function! LightlineCurrentFunction()
+    return get(b:, 'coc_current_function', '')
 endfunction
 
 set noshowmode " Mode is displayed in lightline.
