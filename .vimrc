@@ -51,6 +51,10 @@ set updatetime=300
 set redrawtime=10000
 set hlsearch
 set shortmess+=c
+set notimeout
+set ttimeout
+set timeoutlen=3000
+set ttimeoutlen=50
 
 set laststatus=2 " Always show status line.
 
