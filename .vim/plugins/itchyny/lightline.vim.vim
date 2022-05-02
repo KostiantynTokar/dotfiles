@@ -1,4 +1,3 @@
-" Statusline.
 Plug 'itchyny/lightline.vim'
 
 let g:lightline = {
@@ -9,12 +8,22 @@ let g:lightline = {
     \             [ 'fugitive', 'cocstatus', 'coccurrentfunction' ],
     \           ],
     \ },
+    \ 'tabline': {
+    \   'left': [ [ 'buffers' ], ],
+    \   'right': [ [ 'tabs' ], ],
+    \ },
     \ 'component_function': {
     \   'filetype': 'LightlineFiletype',
     \   'fileformat': 'LightlineFileformat',
     \   'fugitive': 'FugitiveHead',
     \   'cocstatus': 'coc#status',
     \   'coccurrentfunction': 'LightlineCurrentFunction',
+    \ },
+    \ 'component_expand': {
+    \   'buffers': 'lightline#bufferline#buffers',
+    \ },
+    \ 'component_type': {
+    \   'buffers': 'tabsel',
     \ },
     \ 'separator': { 'left': '', 'right': '' },
     \ 'subseparator': { 'left': '', 'right': '' },

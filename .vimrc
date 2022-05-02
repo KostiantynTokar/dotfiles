@@ -138,12 +138,12 @@ source ~/.vim/plugins/christoomey/vim-sort-motion.vim
 source ~/.vim/plugins/christoomey/vim-system-copy.vim
 source ~/.vim/plugins/christoomey/vim-titlecase.vim
 source ~/.vim/plugins/markonm/traces.vim.vim
+source ~/.vim/plugins/preservim/nerdtree.vim
 if exepath("node") != ""
     source ~/.vim/plugins/neoclide/coc.nvim.vim
 endif
+source ~/.vim/plugins/mengelbrecht/lightline-bufferline.vim
 source ~/.vim/plugins/itchyny/lightline.vim.vim
-source ~/.vim/plugins/bling/vim-bufferline.vim
-source ~/.vim/plugins/preservim/nerdtree.vim
 source ~/.vim/plugins/airblade/vim-current-search-match.vim
 source ~/.vim/plugins/editorconfig/editorconfig-vim.vim
 source ~/.vim/plugins/dracula/vim.vim
