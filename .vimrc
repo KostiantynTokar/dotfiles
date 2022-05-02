@@ -77,9 +77,9 @@ nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1
 " Creates new buffer in vertical split.
 nnoremap <leader>v :vnew<CR>
 
-" Swtich buffers with leader+tab and leader+shift+tab.
-nnoremap  <silent> <leader>bn :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <leader>bp :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+" Swtich buffers with leader+bb and leader+bB.
+nnoremap  <silent> <leader>bb :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <leader>bB :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 map gf :edit <cfile><CR>
 
