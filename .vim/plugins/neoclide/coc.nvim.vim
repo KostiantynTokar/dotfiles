@@ -142,19 +142,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-augroup CocConfigD
-    autocmd!
-    autocmd User PlugLoaded ++nested call coc#config('languageserver', {
-    \ "d": {
-    \   "command": "serve-d",
-    \   "filetypes": ["d"],
-    \   "trace.server": "verbose",
-    \   "rootPatterns": ["dub.json", "dub.sdl"],
-    \   "initializationOptions": {
-    \   },
-    \   "settings": {
-    \   },
-    \ }
-    \})
-augroup end

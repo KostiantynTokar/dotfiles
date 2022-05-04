@@ -1,0 +1,16 @@
+{
+    "languageserver": {
+        "d": {
+            "command": "serve-d",
+            "filetypes": ["d"],
+            "trace.server": "verbose",
+            "rootPatterns": ["dub.json", "dub.sdl"],
+            "initializationOptions": {
+            },
+            "settings": {
+            }
+        }
+    },
+    "suggest.autoTrigger": "none",
+    "suggest.noselect": false
+}
