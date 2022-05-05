@@ -4,6 +4,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
     \   'coc-json',
     \   'coc-git',
+    \   'coc-clangd',
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
