@@ -125,6 +125,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " :PlugClean to delete plugins
 call plug#begin('~/.vim/plugged')
 
+source ~/.vim/plugins/chaoren/vim-wordmotion.vim
 source ~/.vim/plugins/tpope/vim-commentary.vim
 source ~/.vim/plugins/tpope/vim-repeat.vim
 source ~/.vim/plugins/tpope/vim-surround.vim
