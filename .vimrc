@@ -61,7 +61,7 @@ set laststatus=2 " Always show status line.
 set formatoptions-=cro " Disable continuation of comments on next line.
 
 " <leader> by default is a '\'
-let mapleader=";"
+let mapleader="\<space>"
 
 nmap <leader>sc :nohlsearch<CR>
 nmap <leader>bd :bufdo bdelete<CR>
