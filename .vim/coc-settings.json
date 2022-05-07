@@ -12,5 +12,25 @@
         }
     },
     "suggest.autoTrigger": "none",
-    "suggest.noselect": false
+    "suggest.noselect": false,
+    "suggest.floatConfig": {
+        "border": true,
+        "highlight": "DraculaBgLighter",
+        "borderhighlight": "DraculaBgLighter"
+    },
+    "diagnostic.floatConfig": {
+        "border": true,
+        "highlight": "DraculaBgLighter",
+        "borderhighlight": "DraculaBgLighter"
+    },
+    "signature.floatConfig": {
+        "border": true,
+        "highlight": "DraculaBgLighter",
+        "borderhighlight": "DraculaBgLighter"
+    },
+    "hover.floatConfig": {
+        "border": true,
+        "highlight": "DraculaBgLighter",
+        "borderhighlight": "DraculaBgLighter"
+    }
 }
