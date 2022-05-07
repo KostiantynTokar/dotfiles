@@ -26,7 +26,7 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-inoremap <silent><c-space> <C-\><C-O>:call CocActionAsync('showSignatureHelp')<cr>
+inoremap <silent><c-s-space> <C-\><C-O>:call CocActionAsync('showSignatureHelp')<cr>
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
