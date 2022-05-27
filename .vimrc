@@ -24,7 +24,6 @@ autocmd FileType help  setlocal number
 autocmd FileType help  setlocal relativenumber
 set showcmd
 set termguicolors
-set undofile
 " set spell
 set title
 set ignorecase
@@ -46,6 +45,11 @@ set exrc
 " set backupdir=~/.vim/tmp//,.
 set nobackup
 set nowritebackup
+set undofile
+set undodir=$HOME/.vim/undo
+if !isdirectory($HOME . "/.vim/undo")
+    execute '!mkdir -p $HOME/.vim/undo'
+endif
 set cmdheight=2
 set updatetime=300
 set redrawtime=10000
