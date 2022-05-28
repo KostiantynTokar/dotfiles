@@ -134,6 +134,7 @@ source ~/.vim/plugins/tpope/vim-commentary.vim
 source ~/.vim/plugins/tpope/vim-repeat.vim
 source ~/.vim/plugins/tpope/vim-surround.vim
 source ~/.vim/plugins/tpope/vim-fugitive.vim
+source ~/.vim/plugins/tpope/vim-projectionist.vim
 source ~/.vim/plugins/kana/vim-textobj-user.vim
 source ~/.vim/plugins/kana/vim-textobj-entire.vim
 source ~/.vim/plugins/kana/vim-textobj-indent.vim
