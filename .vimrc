@@ -59,6 +59,7 @@ set notimeout
 set ttimeout
 set timeoutlen=3000
 set ttimeoutlen=50
+set nrformats+=alpha
 
 set laststatus=2 " Always show status line.
 
