@@ -61,6 +61,10 @@ set timeoutlen=3000
 set ttimeoutlen=50
 set nrformats+=alpha
 
+set autoread
+au FocusGained,BufEnter * :silent! !
+au FocusLost,WinLeave * :silent! w
+
 set laststatus=2 " Always show status line.
 
 set formatoptions-=cro " Disable continuation of comments on next line.
