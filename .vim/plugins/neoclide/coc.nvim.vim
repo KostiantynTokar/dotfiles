@@ -7,10 +7,6 @@ let g:coc_global_extensions = [
     \   'coc-clangd',
     \ ]
 
-if has('win32') || has('win32unix')
-    let g:coc_data_home = substitute($HOME . '/.config/coc', '/', '', '')
-endif
-
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
