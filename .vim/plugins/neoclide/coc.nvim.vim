@@ -1,5 +1,5 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'antoinemadec/coc-fzf'
+Plug 'antoinemadec/coc-fzf'
 
 let g:coc_global_extensions = [
     \   'coc-json',
