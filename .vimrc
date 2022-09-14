@@ -41,10 +41,11 @@ set splitbelow
 " set clipboard=unnamedplus
 set confirm
 set exrc
-" set backup
-" set backupdir=~/.vim/tmp//,.
-set nobackup
-set nowritebackup
+set backup
+set backupdir=~/.vim/bak//,.
+if !isdirectory($HOME . "/.vim/bak")
+    execute '!mkdir -p $HOME/.vim/bak'
+endif
 set undofile
 set undodir=$HOME/.vim/undo
 if !isdirectory($HOME . "/.vim/undo")
