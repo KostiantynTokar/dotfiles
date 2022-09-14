@@ -50,6 +50,10 @@ set undodir=$HOME/.vim/undo
 if !isdirectory($HOME . "/.vim/undo")
     execute '!mkdir -p $HOME/.vim/undo'
 endif
+set directory^=$HOME/.vim/swp//
+if !isdirectory($HOME . "/.vim/swp")
+    execute '!mkdir -p $HOME/.vim/swp'
+endif
 set cmdheight=2
 set updatetime=300
 set redrawtime=10000
