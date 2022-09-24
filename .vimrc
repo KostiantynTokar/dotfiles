@@ -149,6 +149,7 @@ source ~/.vim/plugins/kana/vim-textobj-user.vim
 source ~/.vim/plugins/kana/vim-textobj-entire.vim
 source ~/.vim/plugins/kana/vim-textobj-indent.vim
 source ~/.vim/plugins/kana/vim-textobj-line.vim
+source ~/.vim/plugins/jiangmiao/auto-pairs.vim
 source ~/.vim/plugins/vim-scripts/ReplaceWithRegister.vim
 source ~/.vim/plugins/christoomey/vim-sort-motion.vim
 source ~/.vim/plugins/christoomey/vim-system-copy.vim
