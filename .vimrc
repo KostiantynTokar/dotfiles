@@ -58,6 +58,7 @@ endif
 set cmdheight=2
 set updatetime=300
 set redrawtime=10000
+set incsearch
 set hlsearch
 set shortmess+=c
 set notimeout
