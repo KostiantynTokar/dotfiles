@@ -17,7 +17,7 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set hidden
-set signcolumn=number
+set signcolumn=yes
 set number
 set relativenumber
 autocmd FileType help  setlocal number
