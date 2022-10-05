@@ -10,6 +10,8 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
+nnoremap <C-p> :GitFiles<CR>
+
 " Customize the Files command to use rg which respects .gitignore files.
 " command! -bang -nargs=? -complete=dir Files
 "     \ call fzf#run(fzf#wrap('files', fzf#vim#with_preview({ 'dir': <q-args>, 'sink': 'e', 'source': 'rg --files --hidden' }), <bang>0))
