@@ -77,6 +77,19 @@ set laststatus=2 " Always show status line.
 
 set formatoptions-=cro " Disable continuation of comments on next line.
 
+if &term =~? 'rxvt' || &term =~? 'xterm' || &term =~? 'st-'
+    " 0 or 1 -> blinking block
+    " 2 -> solid block
+    " 3 -> blinking underscore
+    " 4 -> solid underscore
+    " 5 -> blinking vertical bar
+    " 6 -> solid vertical bar
+    " Insert Mode (and Replace Mode, since t_SR is not set)
+    let &t_SI .= "\<Esc>[5 q"
+    " Normal Mode
+    let &t_EI .= "\<Esc>[5 q"
+endif
+
 " <leader> by default is a '\'
 let mapleader="\<space>"
 
