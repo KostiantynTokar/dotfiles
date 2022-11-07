@@ -66,8 +66,6 @@ set ttimeout
 set timeoutlen=3000
 set ttimeoutlen=50
 set nrformats+=alpha
-nnoremap <Tab> >>_
-nnoremap <S-Tab> <<_
 
 set autoread
 au FocusGained,BufEnter * :silent! !
