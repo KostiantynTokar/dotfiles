@@ -88,6 +88,8 @@ if &term =~? 'rxvt' || &term =~? 'xterm' || &term =~? 'st-'
     let &t_EI .= "\<Esc>[5 q"
 endif
 
+set cino=(1s
+
 " <leader> by default is a '\'
 let mapleader="\<space>"
 
