@@ -146,6 +146,14 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " <CR>/v/t to open in an h-split/vsplit/tab
 " check |netrw-browse-maps| for more mappings
 
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if (v:event.operator ==# 'y' && v:event.regname ==# 'w') | call system(s:clip, @w) | endif
+    augroup END
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
