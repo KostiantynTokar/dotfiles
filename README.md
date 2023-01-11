@@ -14,3 +14,9 @@ git-dotfiles config --local status.showUntrackedFiles no
 [include]
   path = ~/.gitconfig-common.inc
 ```
+
+Before running vim, install all plugins by executing
+```
+vim +PlugInstall +qa
+```
+and pressing ENTER several times.
