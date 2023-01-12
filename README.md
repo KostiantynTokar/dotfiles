@@ -27,7 +27,7 @@ vim +PlugInstall +qa
 and pressing ENTER several times.
 
 If NodeJS is installed, installation of clangd is required to enable coc-clangd extension.
-Install clangd and add it to `$PATH`, or execute command inside vim
+Install clangd and add it to `$PATH`, or execute command inside vim while cpp or header file is open
 ```
 :CocCommand clangd.install
 ```
