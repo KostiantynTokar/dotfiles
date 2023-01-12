@@ -116,7 +116,7 @@ map gf :edit <cfile><CR>
 vnoremap < <gv
 vnoremap > >gv
 
-command! -nargs=+ -complete=command Redir new | put=execute('<args>') | 1,2d_
+command! -nargs=+ -complete=command Redir new | put=execute('<args>') | 1,2d_ | :set buftype=nofile
 
 " Search down into subfolders
 " Provides tab-complition for all file-related tasks
