@@ -18,8 +18,16 @@ Restart the shell. From now on `git-dotfiles` alias is available for managing of
   path = ~/.gitconfig-common.inc
 ```
 
+Optionally, install NodeJS on your system for coc.nvim plugin.
+
 Before running vim, install all plugins by executing
 ```
 vim +PlugInstall +qa
 ```
 and pressing ENTER several times.
+
+If NodeJS is installed, installation of clangd is required to enable coc-clangd extension.
+Install clangd and add it to `$PATH`, or execute command inside vim
+```
+:CocCommand clangd.install
+```
