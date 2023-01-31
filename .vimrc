@@ -183,6 +183,7 @@ source ~/.vim/plugins/christoomey/vim-titlecase.vim
 source ~/.vim/plugins/tommcdo/vim-exchange.vim
 source ~/.vim/plugins/markonm/traces.vim.vim
 source ~/.vim/plugins/preservim/nerdtree.vim
+source ~/.vim/plugins/junegunn/vim-easy-align.vim
 source ~/.vim/plugins/junegunn/fzf.vim.vim
 if exepath("node") != ""
     source ~/.vim/plugins/neoclide/coc.nvim.vim
