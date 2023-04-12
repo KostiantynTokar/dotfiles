@@ -118,6 +118,8 @@ vnoremap > >gv
 
 command! -nargs=+ -complete=command Redir new | put=execute('<args>') | 1,2d_ | :set buftype=nofile
 
+command! SyncNotebook execute ':w' | execute ':silent !jupytext --sync '.substitute(expand('%'), ".py$", ".ipynb", "") | execute ':redraw!'
+
 " Search down into subfolders
 " Provides tab-complition for all file-related tasks
 set path+=**
