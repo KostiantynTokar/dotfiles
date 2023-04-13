@@ -118,6 +118,7 @@ vnoremap > >gv
 
 command! -nargs=+ -complete=command Redir new | put=execute('<args>') | 1,2d_ | :set buftype=nofile
 
+command! -nargs=1 -complete=file PairNotebook execute ':silent !jupytext --set-formats ipynb,py:percent '.'<args>' | execute ':redraw!'
 command! SyncNotebook execute ':w' | execute ':silent !jupytext --sync '.substitute(expand('%'), ".py$", ".ipynb", "") | execute ':redraw!'
 
 " Search down into subfolders
