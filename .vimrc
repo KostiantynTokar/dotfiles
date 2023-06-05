@@ -94,7 +94,7 @@ set cino=(1s
 let mapleader="\<space>"
 
 nmap <leader>sc :nohlsearch<CR>
-nmap <leader>bd :bufdo bdelete<CR>
+nmap <leader>bd :b#<CR>:bd#<CR>
 
 " Creates empty line below and above of current line.
 nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>j
