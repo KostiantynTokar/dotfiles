@@ -67,6 +67,8 @@ set timeoutlen=3000
 set ttimeoutlen=50
 set nrformats+=alpha
 
+runtime! ftplugin/man.vim
+
 set autoread
 au FocusGained,BufEnter * :silent! !
 au FocusLost,WinLeave * :silent! w
