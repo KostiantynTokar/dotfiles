@@ -44,16 +44,16 @@ set exrc
 set backup
 set backupdir=~/.vim/bak//,.
 if !isdirectory($HOME . "/.vim/bak")
-    execute '!mkdir -p $HOME/.vim/bak'
+    execute ':silent !mkdir -p $HOME/.vim/bak'
 endif
 set undofile
 set undodir=$HOME/.vim/undo
 if !isdirectory($HOME . "/.vim/undo")
-    execute '!mkdir -p $HOME/.vim/undo'
+    execute ':silent !mkdir -p $HOME/.vim/undo'
 endif
 set directory^=$HOME/.vim/swp//
 if !isdirectory($HOME . "/.vim/swp")
-    execute '!mkdir -p $HOME/.vim/swp'
+    execute ':silent !mkdir -p $HOME/.vim/swp'
 endif
 set cmdheight=2
 set updatetime=300
