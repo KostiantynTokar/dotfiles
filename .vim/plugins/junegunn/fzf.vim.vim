@@ -10,7 +10,7 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-nnoremap <C-p> :GitFiles<CR>
+nnoremap <C-p> :Files<CR>
 
 " Customize the Files command to use rg which respects .gitignore files.
 " command! -bang -nargs=? -complete=dir Files
