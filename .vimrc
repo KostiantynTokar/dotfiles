@@ -124,6 +124,9 @@ command! -nargs=+ -complete=command Redir new | put=execute('<args>') | 1,2d_ | 
 command! -nargs=1 -complete=file PairNotebook echo system('touch '.'<args>'.' && jupytext --set-formats ipynb,py:percent '.'<args>')
 command! SyncNotebook execute ':w' | execute ':silent !jupytext --sync '.substitute(expand('%'), ".py$", ".ipynb", "") | execute ':redraw!'
 
+nnoremap <leader>ec :set cc=80<CR>
+nnoremap <leader>dc :set cc=0<CR>
+
 " Search down into subfolders
 " Provides tab-complition for all file-related tasks
 set path+=**
