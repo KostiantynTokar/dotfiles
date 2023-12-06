@@ -91,6 +91,11 @@ if &term =~? 'rxvt' || &term =~? 'xterm' || &term =~? 'st-'
 endif
 
 set cino=(1s
+set cino+=N-s
+set cino+=g0
+set cino+=:0
+set cino+=l1
+set cino+=J1
 
 " <leader> by default is a '\'
 let mapleader="\<space>"
