@@ -169,6 +169,16 @@ if executable(s:clip)
     augroup END
 endif
 
+function! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfunction
+
+command! TrimWhitespace call TrimWhitespace()
+
+:noremap <silent> <leader>tw :TrimWhitespace<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
