@@ -71,6 +71,8 @@ set timeoutlen=3000
 set ttimeoutlen=50
 set nrformats+=alpha
 
+packadd matchit
+
 runtime! ftplugin/man.vim
 
 set autoread
