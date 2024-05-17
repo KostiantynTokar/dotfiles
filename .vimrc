@@ -76,8 +76,8 @@ packadd matchit
 runtime! ftplugin/man.vim
 
 set autoread
-au FocusGained,BufEnter * :silent! !
-au FocusLost,WinLeave * :silent! w
+au FocusGained,BufEnter * :silent! checktime
+au FocusLost,WinLeave * :silent! update
 
 set laststatus=2 " Always show status line.
 
