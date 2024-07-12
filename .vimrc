@@ -221,6 +221,7 @@ source ~/.vim/plugins/dracula/vim.vim
 source ~/.vim/plugins/voldikss/vim-floaterm.vim
 source ~/.vim/plugins/arp242/auto_mkdir2.vim
 source ~/.vim/plugins/bfrg/vim-cpp-modern.vim
+source ~/.vim/plugins/biosugar0/vim-popyank.vim
 
 call plug#end()
 doautocmd User PlugLoaded
