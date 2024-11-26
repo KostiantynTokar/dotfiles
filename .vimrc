@@ -79,6 +79,8 @@ set autoread
 au FocusGained,BufEnter * :silent! checktime
 au FocusLost,WinLeave * :silent! update
 
+autocmd TerminalWinOpen * :setlocal nonumber norelativenumber signcolumn=no
+
 set laststatus=2 " Always show status line.
 
 set formatoptions-=cro " Disable continuation of comments on next line.
