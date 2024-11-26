@@ -166,6 +166,8 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " <CR>/v/t to open in an h-split/vsplit/tab
 " check |netrw-browse-maps| for more mappings
 
+nnoremap <expr> <silent> <leader>yf '<CMD>let @'.v:register.'=expand("%")<CR>'
+
 let s:clip = '/mnt/c/Windows/System32/clip.exe'
 if executable(s:clip)
     augroup WSLYank
