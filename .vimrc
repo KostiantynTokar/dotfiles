@@ -174,6 +174,8 @@ if executable(s:clip)
         autocmd!
         autocmd TextYankPost * if (v:event.operator ==# 'y' && v:event.regname ==# 'p') | call system(s:clip, @p) | endif
     augroup END
+    command! -nargs=1 SystemClip call system(s:clip, <args>)
+    nnoremap <expr> <silent> <leader>ys '<CMD>SystemClip @'.v:register.'<CR>'
 endif
 
 function! TrimWhitespace()
