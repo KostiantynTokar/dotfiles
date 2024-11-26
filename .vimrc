@@ -135,6 +135,9 @@ command! SyncNotebook execute ':w' | execute ':silent !jupytext --sync '.substit
 nnoremap <silent> <leader>ec :set cc=80<CR>
 nnoremap <silent> <leader>dc :set cc=0<CR>
 
+nnoremap <silent> <leader>eh :set cursorline cursorcolumn<CR>
+nnoremap <silent> <leader>dh :set nocursorline nocursorcolumn<CR>
+
 " Search down into subfolders
 " Provides tab-complition for all file-related tasks
 set path+=**
