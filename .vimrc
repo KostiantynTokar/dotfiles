@@ -223,11 +223,11 @@ source ~/.vim/plugins/junegunn/fzf.vim.vim
 if exepath("node") != ""
     source ~/.vim/plugins/neoclide/coc.nvim.vim
 endif
-source ~/.vim/plugins/mengelbrecht/lightline-bufferline.vim
-source ~/.vim/plugins/itchyny/lightline.vim.vim
 source ~/.vim/plugins/airblade/vim-current-search-match.vim
 source ~/.vim/plugins/editorconfig/editorconfig-vim.vim
 source ~/.vim/plugins/dracula/vim.vim
+source ~/.vim/plugins/mengelbrecht/lightline-bufferline.vim
+source ~/.vim/plugins/itchyny/lightline.vim.vim
 source ~/.vim/plugins/voldikss/vim-floaterm.vim
 source ~/.vim/plugins/arp242/auto_mkdir2.vim
 source ~/.vim/plugins/bfrg/vim-cpp-modern.vim

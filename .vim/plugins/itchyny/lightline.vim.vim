@@ -46,3 +46,19 @@ set noshowmode " Mode is displayed in lightline.
 if !has('gui_running') " Enable colors for lightline
     set t_Co=256
 endif
+
+function! LightlineReload()
+    call lightline#init()
+    call lightline#colorscheme()
+    call lightline#update()
+endfunction
+
+function! LightlineResetColorscheme(new_colorscheme)
+    let g:lightline.colorscheme=a:new_colorscheme
+    call LightlineReload()
+endfunction
+
+augroup LightlineColorschemeOverrides
+    autocmd!
+    autocmd ColorScheme * call LightlineResetColorscheme(expand("<amatch>"))
+augroup end
