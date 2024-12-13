@@ -225,7 +225,13 @@ if exepath("node") != ""
 endif
 source ~/.vim/plugins/airblade/vim-current-search-match.vim
 source ~/.vim/plugins/editorconfig/editorconfig-vim.vim
+
 source ~/.vim/plugins/dracula/vim.vim
+source ~/.vim/plugins/ericbn/vim-solarized.vim
+source ~/.vim/plugins/NLKNguyen/papercolor-theme.vim
+source ~/.vim/plugins/sainnhe/everforest.vim
+source ~/.vim/plugins/morhetz/gruvbox.vim
+
 source ~/.vim/plugins/mengelbrecht/lightline-bufferline.vim
 source ~/.vim/plugins/itchyny/lightline.vim.vim
 source ~/.vim/plugins/voldikss/vim-floaterm.vim
@@ -235,3 +241,9 @@ source ~/.vim/plugins/biosugar0/vim-popyank.vim
 
 call plug#end()
 doautocmd User PlugLoaded
+
+colorscheme dracula
+" colorscheme solarized
+" colorscheme PaperColor
+" colorscheme everforest
+" colorscheme gruvbox
