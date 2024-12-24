@@ -23,10 +23,10 @@ set number
 set relativenumber
 autocmd FileType help  setlocal number
 autocmd FileType help  setlocal relativenumber
-set cursorline
-set cursorcolumn
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
+" set cursorline
+" set cursorcolumn
+" au WinLeave * set nocursorline nocursorcolumn
+" au WinEnter * set cursorline cursorcolumn
 set showcmd
 set termguicolors
 " set spell
