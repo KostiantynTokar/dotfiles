@@ -179,6 +179,25 @@ if executable(s:clip)
     nnoremap <expr> <silent> <leader>ys '<CMD>SystemClip @'.v:register.'<CR>'
 endif
 
+function! CountMatchesStr(pattern = '')
+    let pos=getpos('.')
+    try
+        let search_command = "silent %s/" . a:pattern . "//gne"
+        redir => search_result
+        execute search_command
+        redir END
+        return matchstr(search_result, '\d\+')
+    finally
+        call setpos('.', pos)
+    endtry
+endfunction
+
+command! -nargs=1 CountMatches echo CountMatchesStr('<args>')
+command! -nargs=1 CountMatchesStr call setreg(v:register, CountMatchesStr('<args>'))
+
+nnoremap <silent> <leader>snc :call setreg(v:register, CountMatchesStr())<CR>
+nnoremap <silent> <leader>snw :call setreg(v:register, CountMatchesStr(expand("<cword>")))<CR>
+
 function! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
