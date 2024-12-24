@@ -1,7 +1,6 @@
 Plug 'itchyny/lightline.vim'
 
 let g:lightline = {
-    \ 'colorscheme': 'wombat',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'readonly', 'filename', 'modified' ],
