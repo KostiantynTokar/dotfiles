@@ -242,8 +242,8 @@ source ~/.vim/plugins/biosugar0/vim-popyank.vim
 call plug#end()
 doautocmd User PlugLoaded
 
-colorscheme dracula
+" colorscheme dracula
 " colorscheme solarized
-" colorscheme PaperColor
+colorscheme PaperColor
 " colorscheme everforest
 " colorscheme gruvbox
