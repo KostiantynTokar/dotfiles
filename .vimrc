@@ -94,9 +94,9 @@ if &term =~? 'rxvt' || &term =~? 'xterm' || &term =~? 'st-'
     " 5 -> blinking vertical bar
     " 6 -> solid vertical bar
     " Insert Mode (and Replace Mode, since t_SR is not set)
-    let &t_SI .= "\<Esc>[5 q"
+    let &t_SI .= "\<Esc>[2 q"
     " Normal Mode
-    let &t_EI .= "\<Esc>[5 q"
+    let &t_EI .= "\<Esc>[2 q"
 endif
 
 set cino=(1s
