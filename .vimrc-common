@@ -260,6 +260,8 @@ source ~/.vim/plugins/arp242/auto_mkdir2.vim
 source ~/.vim/plugins/bfrg/vim-cpp-modern.vim
 source ~/.vim/plugins/biosugar0/vim-popyank.vim
 
+source ~/.vim/plugins/ziglang/zig.vim.vim
+
 call plug#end()
 doautocmd User PlugLoaded
 
