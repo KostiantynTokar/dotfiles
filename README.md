@@ -1,14 +1,15 @@
 # dotfiles
 
-Clone to your home directory
+Clone to your home directory and restore files.
 ```bash
 git clone --bare git@github.com:KostiantynTokar/dotfiles.git ~/dotfiles.git
 git --git-dir=$HOME/dotfiles.git --work-tree=$HOME config --local status.showUntrackedFiles no
 git --git-dir=$HOME/dotfiles.git --work-tree=$HOME restore --staged .
 ```
-Resolve your config files. See the diff between configs from the repo and your local configs via
+
+Until you source `.bashrc-common`, you can use git commands on this repo like this:
 ```bash
-git --git-dir=$HOME/dotfiles.git --work-tree=$HOME diff
+git --git-dir=$HOME/dotfiles.git --work-tree=$HOME <command>
 ```
 
 `.bashrc-common` should be sourced at the end of `~/.bashrc`:
@@ -22,7 +23,12 @@ git --git-dir=$HOME/dotfiles.git --work-tree=$HOME diff
   path = ~/.gitconfig-common.inc
 ```
 
-Restart the shell. From now on `git-dotfiles` alias is available for managing of this repo.
+`.vimrc-common` should be sourced at the end of `~/.vimrc`:
+```vim
+source ~/.vimrc-common
+```
+
+Restart the shell. From now on the alias `git-dotfiles` is available for managing this repo.
 
 Optionally, install NodeJS on your system for coc.nvim plugin.
 
