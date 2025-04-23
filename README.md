@@ -31,6 +31,7 @@ source ~/.vimrc-common
 Restart the shell. From now on the alias `git-dotfiles` is available for managing this repo.
 
 Optionally, install NodeJS on your system for coc.nvim plugin.
+It is required for IDE-like features (go to definition, rename variable, etc.).
 
 Before running vim, install all plugins by executing
 ```
@@ -39,7 +40,8 @@ vim +PlugInstall +qa
 and pressing ENTER several times.
 
 If NodeJS is installed, installation of clangd is required to enable coc-clangd extension.
-Install clangd and add it to `$PATH`, or execute command inside vim while cpp or header file is open
+clangd is a C++ language server that's required in C++ projects for IDE-like features.
+Install clangd and add it to `PATH`, or execute command inside vim while cpp or header file is open
 ```
 :CocCommand clangd.install
 ```
