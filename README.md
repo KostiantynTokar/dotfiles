@@ -10,13 +10,19 @@ Resolve your config files. See the diff between configs from the repo and your l
 ```bash
 git --git-dir=$HOME/dotfiles.git --work-tree=$HOME diff
 ```
-Restart the shell. From now on `git-dotfiles` alias is available for managing of this repo.
+
+`.bashrc-common` should be sourced at the end of `~/.bashrc`:
+```bash
+. ~/.bashrc-common
+```
 
 .gitconfig-common.inc should be included in global ~/.gitconfig
 ```
 [include]
   path = ~/.gitconfig-common.inc
 ```
+
+Restart the shell. From now on `git-dotfiles` alias is available for managing of this repo.
 
 Optionally, install NodeJS on your system for coc.nvim plugin.
 
