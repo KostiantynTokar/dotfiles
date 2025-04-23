@@ -6,7 +6,7 @@
         // Formatting with ZLS matches `zig fmt`.
         // The Zig FAQ answers some questions about `zig fmt`:
         // https://github.com/ziglang/zig/wiki/FAQ
-        "coc.preferences.formatOnSave": true,
+        // "coc.preferences.formatOnSave": true,
 
         // Show inlay hints in the editor. Inlay hints are short annotations within the code,
         // which show variable types or parameter names.
