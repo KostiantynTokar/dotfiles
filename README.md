@@ -45,3 +45,23 @@ Install clangd and add it to `PATH`, or execute command inside vim while cpp or 
 ```
 :CocCommand clangd.install
 ```
+
+## Terminal Fonts
+
+Vim may use some Unicode symbols that may be absent from the default font on some terminals.
+You can install fonst that support those vim features from [NerdFonts](https://github.com/ryanoasis/nerd-fonts).
+See installation methods in theirs `readme.md`. One of the methods is cloning the repo
+```bash
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+```
+and using the installation script
+```bash
+./install.sh <FontName>
+```
+or, in PowerShell (Windows)
+```powershell
+./install.ps1 <FontName>
+```
+I prefer `FiraMono` font because it is a monospaced font without ligatures.
+
+After installation, open your terminal settings and select the installed font.
