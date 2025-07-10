@@ -8,6 +8,8 @@ let g:coc_global_extensions = [
     \   'coc-jedi',
     \ ]
 
+let g:coc_config_home = '~/.vim'
+
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
