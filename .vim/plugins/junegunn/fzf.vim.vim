@@ -4,6 +4,10 @@ Plug 'stsewd/fzf-checkout.vim'
 
 let g:fzf_layout = { 'up': '~90%', 'window': { 'width': 0.8, 'height': 0.8, 'yoffset': 0.5, 'xoffset': 0.5 } }
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline  --bind "alt-a:select-all,alt-d:deselect-all"'
+let g:fzf_vim = {}
+let g:fzf_vim.commits_log_options = '--graph --oneline --color=always'
+let g:fzf_vim.files_options = ['--layout=reverse', '--info=inline', '--bind=alt-a:select-all,alt-d:deselect-all']
+let g:fzf_vim.commits_options = ['--layout=reverse', '--info=inline']
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -34,5 +38,5 @@ endfunction
 command! BD call fzf#run(fzf#wrap({
   \ 'source': s:list_buffers(),
   \ 'sink*': { lines -> s:delete_buffers(lines) },
-  \ 'options': '--multi --reverse --bind ctrl-a:select-all+accept'
+  \ 'options': ['--multi', '--layout=reverse', '--bind=ctrl-a:select-all+accept']
 \ }))
