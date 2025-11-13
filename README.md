@@ -7,6 +7,12 @@ git --git-dir=$HOME/dotfiles.git --work-tree=$HOME config --local status.showUnt
 git --git-dir=$HOME/dotfiles.git --work-tree=$HOME restore --staged .
 ```
 
+Then to make files appear in your home directory execute the following command.
+WARNING: this may overwrite your files with the same names.
+```
+git --git-dir=$HOME/dotfiles.git --work-tree=$HOME restore .
+```
+
 Until you source `.bashrc-common`, you can use git commands on this repo like this:
 ```bash
 git --git-dir=$HOME/dotfiles.git --work-tree=$HOME <command>
