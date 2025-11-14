@@ -1,7 +1,17 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf'
 
+" To enable diagnostics, configure :CocConfigLocal, for example
+" "diagnostic-languageserver.filetypes": {
+"     "python": ["pylint", "mypy"]
+" }
+" "diagnostic-languageserver.formatFiletypes": {
+"     "cmake": "cmake-format"
+" }
+" To configure each linter/formatter, see "diagnostic-languageserver.linters".
+
 let g:coc_global_extensions = [
+    \   'coc-diagnostic',
     \   'coc-json',
     \   'coc-git',
     \   'coc-clangd',
