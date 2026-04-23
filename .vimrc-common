@@ -251,6 +251,7 @@ source ~/.vim/plugins/dracula/vim.vim
 source ~/.vim/plugins/ericbn/vim-solarized.vim
 source ~/.vim/plugins/NLKNguyen/papercolor-theme.vim
 source ~/.vim/plugins/sainnhe/everforest.vim
+source ~/.vim/plugins/sainnhe/sonokai.vim
 source ~/.vim/plugins/morhetz/gruvbox.vim
 
 source ~/.vim/plugins/mengelbrecht/lightline-bufferline.vim
@@ -269,4 +270,5 @@ doautocmd User PlugLoaded
 " colorscheme solarized
 colorscheme PaperColor
 " colorscheme everforest
+" colorscheme sonokai
 " colorscheme gruvbox
