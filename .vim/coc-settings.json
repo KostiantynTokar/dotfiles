@@ -69,5 +69,9 @@
         "border": true,
         "highlight": "DraculaBgLighter",
         "borderhighlight": "DraculaBgLighter"
-    }
+    },
+    "clangd.arguments": [
+        "--clang-tidy",
+        "--header-insertion=never"
+    ]
 }
