@@ -8,5 +8,6 @@ augroup SonokaiOverrides
     " autocmd User PlugLoaded ++nested let g:sonokai_style='shusia'
     " autocmd User PlugLoaded ++nested let g:sonokai_style='maia'
     " autocmd User PlugLoaded ++nested let g:sonokai_style='espresso'
+    autocmd User PlugLoaded ++nested let g:sonokai_disable_italic_comment=1
     autocmd User PlugLoaded ++nested let g:sonokai_better_performance=1
 augroup end
