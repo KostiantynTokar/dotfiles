@@ -41,7 +41,8 @@
                 //
                 // Further information about build-on save:
                 // https://zigtools.org/zls/guides/build-on-save/
-                "zls.enable_build_on_save": true,
+                // "zls.enable_build_on_save": true,
+                "zls.build_on_save_args": ["-fincremental"]
 
                 // omit the following line if `zig` is in your PATH
                 // "zls.zig_exe_path": "zig"
