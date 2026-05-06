@@ -53,24 +53,16 @@
     "suggest.autoTrigger": "none",
     "suggest.noselect": false,
     "suggest.floatConfig": {
-        "border": true,
-        "highlight": "DraculaBgLighter",
-        "borderhighlight": "DraculaBgLighter"
+        "border": true
     },
     "diagnostic.floatConfig": {
-        "border": true,
-        "highlight": "DraculaBgLighter",
-        "borderhighlight": "DraculaBgLighter"
+        "border": true
     },
     "signature.floatConfig": {
-        "border": true,
-        "highlight": "DraculaBgLighter",
-        "borderhighlight": "DraculaBgLighter"
+        "border": true
     },
     "hover.floatConfig": {
-        "border": true,
-        "highlight": "DraculaBgLighter",
-        "borderhighlight": "DraculaBgLighter"
+        "border": true
     },
     "clangd.arguments": [
         "--clang-tidy",
