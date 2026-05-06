@@ -49,6 +49,7 @@
             }
         }
     },
+    "inlayHint.enable": false,
     "suggest.autoTrigger": "none",
     "suggest.noselect": false,
     "suggest.floatConfig": {
