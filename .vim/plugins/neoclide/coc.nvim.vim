@@ -29,7 +29,7 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
@@ -44,14 +44,14 @@ inoremap <silent><c-s-space> <C-\><C-O>:call CocActionAsync('showSignatureHelp')
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent><nowait> [g <Plug>(coc-diagnostic-prev)
+nmap <silent><nowait> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent><nowait> gd <Plug>(coc-definition)
+nmap <silent><nowait> gy <Plug>(coc-type-definition)
+nmap <silent><nowait> gi <Plug>(coc-implementation)
+nmap <silent><nowait> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call ShowDocumentation()<CR>
@@ -82,7 +82,7 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Applying codeAction to the selected region.
+" Applying code actions to the selected code block.
 " Example: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
@@ -113,7 +113,7 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
-" Remap <C-f> and <C-b> for scroll float windows/popups.
+" Remap <C-f> and <C-b> to scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
   nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
