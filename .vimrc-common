@@ -117,7 +117,7 @@ nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1
 nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>k
 
 " Open new buffer in horizontal split: <C-w>n or :new.
-" Open new buffer in horizontal split: :vnew. But <C-w>v opens existing buffer
+" Open new buffer in vertical split: :vnew. But <C-w>v opens existing buffer
 " in horizontal split.
 
 " Creates new buffer in vertical split.
