@@ -50,8 +50,9 @@ set exrc
 set backup
 set undofile
 
-let s:data_dir   = empty($XDG_DATA_HOME)  ? expand("~/.local/share") : expand("$XDG_DATA_HOME")
-let s:state_dir  = empty($XDG_STATE_HOME) ? expand("~/.local/state") : expand("$XDG_STATE_HOME")
+let s:config_dir = empty($XDG_CONFIG_HOME) ? expand("~/.config")      : expand("$XDG_CONFIG_HOME")
+let s:data_dir   = empty($XDG_DATA_HOME)   ? expand("~/.local/share") : expand("$XDG_DATA_HOME")
+let s:state_dir  = empty($XDG_STATE_HOME)  ? expand("~/.local/state") : expand("$XDG_STATE_HOME")
 
 func s:mkdir_if_missing(dir)
     if !isdirectory(a:dir)
@@ -60,10 +61,19 @@ func s:mkdir_if_missing(dir)
     return a:dir
 endfunc
 
-let &undodir   = s:mkdir_if_missing(s:data_dir .. "/vim/undo")
+if index(split(&packpath, ','), s:data_dir .. '/vim') == -1
+    exe $"set packpath^={s:data_dir}/vim"
+    exe $"set packpath+={s:data_dir}/vim/after"
+endif
 
-let &directory = s:mkdir_if_missing(s:state_dir .. "/vim/swap") .. "//"
-let &backupdir = s:mkdir_if_missing(s:state_dir .. "/vim/backup") .. "//,."
+let &undodir     = s:mkdir_if_missing(s:data_dir .. "/vim/undo")
+let &viewdir     = s:mkdir_if_missing(s:data_dir .. '/vim/view')
+let g:netrw_home = s:mkdir_if_missing(s:data_dir .. '/vim')
+call s:mkdir_if_missing(s:data_dir .. '/vim/spell')
+
+let &viminfofile = s:mkdir_if_missing(s:state_dir .. '/vim') .. '/viminfo'
+let &directory   = s:mkdir_if_missing(s:state_dir .. "/vim/swap") .. "//"
+let &backupdir   = s:mkdir_if_missing(s:state_dir .. "/vim/backup") .. "//,."
 
 set cmdheight=2
 set updatetime=300
