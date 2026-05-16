@@ -47,6 +47,12 @@ set splitbelow
 set confirm
 set exrc
 
+set backup
+set undofile
+
+let s:data_dir   = empty($XDG_DATA_HOME)  ? expand("~/.local/share") : expand("$XDG_DATA_HOME")
+let s:state_dir  = empty($XDG_STATE_HOME) ? expand("~/.local/state") : expand("$XDG_STATE_HOME")
+
 func s:mkdir_if_missing(dir)
     if !isdirectory(a:dir)
         call mkdir(a:dir, "p", 0700)
@@ -54,11 +60,10 @@ func s:mkdir_if_missing(dir)
     return a:dir
 endfunc
 
-set backup
-set undofile
-let &backupdir = s:mkdir_if_missing(expand("~/.vim/bak")) .. ",."
-let &undodir   = s:mkdir_if_missing(expand("~/.vim/undo"))
-let &directory = s:mkdir_if_missing(expand("~/.vim/swp")) .. "//"
+let &undodir   = s:mkdir_if_missing(s:data_dir .. "/vim/undo")
+
+let &directory = s:mkdir_if_missing(s:state_dir .. "/vim/swap") .. "//"
+let &backupdir = s:mkdir_if_missing(s:state_dir .. "/vim/backup") .. "//,."
 
 set cmdheight=2
 set updatetime=300
