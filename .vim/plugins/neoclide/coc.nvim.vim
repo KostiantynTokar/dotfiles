@@ -19,7 +19,7 @@ let g:coc_global_extensions = [
     \ ]
 
 let s:config_dir = empty($XDG_CONFIG_HOME) ? expand("~/.config") : expand("$XDG_CONFIG_HOME")
-let g:coc_config_home = '~/.vim'
+let g:coc_config_home = s:config_dir . "/coc"
 let g:coc_data_home = s:config_dir . "/coc"
 
 " Use tab for trigger completion with characters ahead and navigate.
