@@ -46,20 +46,20 @@ set splitbelow
 " set clipboard=unnamedplus
 set confirm
 set exrc
+
+func s:mkdir_if_missing(dir)
+    if !isdirectory(a:dir)
+        call mkdir(a:dir, "p", 0700)
+    endif
+    return a:dir
+endfunc
+
 set backup
-set backupdir=~/.vim/bak//,.
-if !isdirectory($HOME . "/.vim/bak")
-    execute ':silent !mkdir -p $HOME/.vim/bak'
-endif
 set undofile
-set undodir=$HOME/.vim/undo
-if !isdirectory($HOME . "/.vim/undo")
-    execute ':silent !mkdir -p $HOME/.vim/undo'
-endif
-set directory^=$HOME/.vim/swp//
-if !isdirectory($HOME . "/.vim/swp")
-    execute ':silent !mkdir -p $HOME/.vim/swp'
-endif
+let &backupdir = s:mkdir_if_missing(expand("~/.vim/bak")) .. ",."
+let &undodir   = s:mkdir_if_missing(expand("~/.vim/undo"))
+let &directory = s:mkdir_if_missing(expand("~/.vim/swp")) .. "//"
+
 set cmdheight=2
 set updatetime=300
 set redrawtime=10000
