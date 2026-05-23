@@ -19,6 +19,7 @@ let g:coc_global_extensions = [
     \ ]
 
 let g:coc_config_home = g:default_config_dir .. "/coc"
+let g:coc_data_home   = g:default_state_dir .. "/coc"
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
