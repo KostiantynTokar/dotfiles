@@ -235,6 +235,8 @@ set langmap=ЙQ,ЦW,УE,КR,ЕT,НY,ГU,ШI,ЩO,ЗP,Х{,Ї},ФA,ІS,ВD,АF,ПG,
 " => Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let g:plugins_dir = expand("<sfile>:p:h") .. '/plugins'
+
 " Plugins that are installed by Vim-plug
 " :PlugInstall to install plugins (need reload vim after this)
 " :PlugUpdate to update plugins
@@ -242,48 +244,48 @@ set langmap=ЙQ,ЦW,УE,КR,ЕT,НY,ГU,ШI,ЩO,ЗP,Х{,Ї},ФA,ІS,ВD,АF,ПG,
 " :PlugClean to delete plugins
 call plug#begin('~/.vim/plugged')
 
-source ~/.vim/plugins/chaoren/vim-wordmotion.vim
-source ~/.vim/plugins/tpope/vim-commentary.vim
-source ~/.vim/plugins/tpope/vim-repeat.vim
-source ~/.vim/plugins/tpope/vim-surround.vim
-source ~/.vim/plugins/tpope/vim-fugitive.vim
-source ~/.vim/plugins/tpope/vim-unimpaired.vim
-" source ~/.vim/plugins/tpope/vim-projectionist.vim
-source ~/.vim/plugins/kana/vim-textobj-user.vim
-source ~/.vim/plugins/kana/vim-textobj-entire.vim
-source ~/.vim/plugins/kana/vim-textobj-indent.vim
-source ~/.vim/plugins/kana/vim-textobj-line.vim
-source ~/.vim/plugins/jiangmiao/auto-pairs.vim
-source ~/.vim/plugins/vim-scripts/ReplaceWithRegister.vim
-source ~/.vim/plugins/christoomey/vim-sort-motion.vim
-source ~/.vim/plugins/christoomey/vim-titlecase.vim
-source ~/.vim/plugins/tommcdo/vim-exchange.vim
-source ~/.vim/plugins/markonm/traces.vim.vim
-source ~/.vim/plugins/preservim/nerdtree.vim
-source ~/.vim/plugins/junegunn/vim-easy-align.vim
-source ~/.vim/plugins/junegunn/fzf.vim.vim
+execute 'source ' .. g:plugins_dir .. '/chaoren/vim-wordmotion.vim'
+execute 'source ' .. g:plugins_dir .. '/tpope/vim-commentary.vim'
+execute 'source ' .. g:plugins_dir .. '/tpope/vim-repeat.vim'
+execute 'source ' .. g:plugins_dir .. '/tpope/vim-surround.vim'
+execute 'source ' .. g:plugins_dir .. '/tpope/vim-fugitive.vim'
+execute 'source ' .. g:plugins_dir .. '/tpope/vim-unimpaired.vim'
+" execute 'source ' .. g:plugins_dir .. '/tpope/vim-projectionist.vim'
+execute 'source ' .. g:plugins_dir .. '/kana/vim-textobj-user.vim'
+execute 'source ' .. g:plugins_dir .. '/kana/vim-textobj-entire.vim'
+execute 'source ' .. g:plugins_dir .. '/kana/vim-textobj-indent.vim'
+execute 'source ' .. g:plugins_dir .. '/kana/vim-textobj-line.vim'
+execute 'source ' .. g:plugins_dir .. '/jiangmiao/auto-pairs.vim'
+execute 'source ' .. g:plugins_dir .. '/vim-scripts/ReplaceWithRegister.vim'
+execute 'source ' .. g:plugins_dir .. '/christoomey/vim-sort-motion.vim'
+execute 'source ' .. g:plugins_dir .. '/christoomey/vim-titlecase.vim'
+execute 'source ' .. g:plugins_dir .. '/tommcdo/vim-exchange.vim'
+execute 'source ' .. g:plugins_dir .. '/markonm/traces.vim.vim'
+execute 'source ' .. g:plugins_dir .. '/preservim/nerdtree.vim'
+execute 'source ' .. g:plugins_dir .. '/junegunn/vim-easy-align.vim'
+execute 'source ' .. g:plugins_dir .. '/junegunn/fzf.vim.vim'
 if exepath("node") != ""
-    source ~/.vim/plugins/neoclide/coc.nvim.vim
+    execute 'source ' .. g:plugins_dir .. '/neoclide/coc.nvim.vim'
 endif
-source ~/.vim/plugins/airblade/vim-current-search-match.vim
-source ~/.vim/plugins/editorconfig/editorconfig-vim.vim
+execute 'source ' .. g:plugins_dir .. '/airblade/vim-current-search-match.vim'
+execute 'source ' .. g:plugins_dir .. '/editorconfig/editorconfig-vim.vim'
 
-source ~/.vim/plugins/dracula/vim.vim
-source ~/.vim/plugins/ericbn/vim-solarized.vim
-source ~/.vim/plugins/NLKNguyen/papercolor-theme.vim
-source ~/.vim/plugins/ghifarit53/tokyonight-vim.vim
-source ~/.vim/plugins/sainnhe/everforest.vim
-source ~/.vim/plugins/sainnhe/sonokai.vim
-source ~/.vim/plugins/morhetz/gruvbox.vim
+execute 'source ' .. g:plugins_dir .. '/dracula/vim.vim'
+execute 'source ' .. g:plugins_dir .. '/ericbn/vim-solarized.vim'
+execute 'source ' .. g:plugins_dir .. '/NLKNguyen/papercolor-theme.vim'
+execute 'source ' .. g:plugins_dir .. '/ghifarit53/tokyonight-vim.vim'
+execute 'source ' .. g:plugins_dir .. '/sainnhe/everforest.vim'
+execute 'source ' .. g:plugins_dir .. '/sainnhe/sonokai.vim'
+execute 'source ' .. g:plugins_dir .. '/morhetz/gruvbox.vim'
 
-source ~/.vim/plugins/mengelbrecht/lightline-bufferline.vim
-source ~/.vim/plugins/itchyny/lightline.vim.vim
-source ~/.vim/plugins/voldikss/vim-floaterm.vim
-source ~/.vim/plugins/arp242/auto_mkdir2.vim
-source ~/.vim/plugins/bfrg/vim-cpp-modern.vim
-source ~/.vim/plugins/biosugar0/vim-popyank.vim
+execute 'source ' .. g:plugins_dir .. '/mengelbrecht/lightline-bufferline.vim'
+execute 'source ' .. g:plugins_dir .. '/itchyny/lightline.vim.vim'
+execute 'source ' .. g:plugins_dir .. '/voldikss/vim-floaterm.vim'
+execute 'source ' .. g:plugins_dir .. '/arp242/auto_mkdir2.vim'
+execute 'source ' .. g:plugins_dir .. '/bfrg/vim-cpp-modern.vim'
+execute 'source ' .. g:plugins_dir .. '/biosugar0/vim-popyank.vim'
 
-source ~/.vim/plugins/ziglang/zig.vim.vim
+execute 'source ' .. g:plugins_dir .. '/ziglang/zig.vim.vim'
 
 call plug#end()
 doautocmd User PlugLoaded
