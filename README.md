@@ -1,40 +1,22 @@
 # dotfiles
 
-Clone to your home directory and restore files.
+In the following instructions `<dotfiles>` means the path to this repository.
+
+`bashrc-common` should be sourced in the bashrc (usually `~/.bashrc`):
 ```bash
-git clone --bare git@github.com:KostiantynTokar/dotfiles.git ~/dotfiles.git
-git --git-dir=$HOME/dotfiles.git --work-tree=$HOME config --local status.showUntrackedFiles no
-git --git-dir=$HOME/dotfiles.git --work-tree=$HOME restore --staged .
+. <dotfiles>/bashrc-common
 ```
 
-Then to make files appear in your home directory execute the following command.
-WARNING: this may overwrite your files with the same names.
-```
-git --git-dir=$HOME/dotfiles.git --work-tree=$HOME restore .
-```
-
-Until you source `bashrc-common`, you can use git commands on this repo like this:
-```bash
-git --git-dir=$HOME/dotfiles.git --work-tree=$HOME <command>
-```
-
-`bashrc-common` should be sourced at the end of `~/.bashrc`:
-```bash
-. ~/bashrc-common
-```
-
-`gitconfig-common` should be included in global `~/.gitconfig`:
+`gitconfig-common` should be included in the global gitconfig (usually `~/.gitconfig`, may be `$XDG_CONFIG_HOME/git/config`):
 ```
 [include]
-    path = ~/gitconfig-common
+    path = <dotfiles>/gitconfig-common
 ```
 
-`vim/vimrc-common` should be sourced at the end of `~/.vimrc`:
+`vim/vimrc-common` should be sourced in the vimrc file (usually `~/.vimrc`, may be `$XDG_CONFIG_HOME/vim/vimrc` or other, see `:h .vimrc`):
 ```vim
-source ~/vim/vimrc-common
+source <dotfiles>/vim/vimrc-common
 ```
-
-Restart the shell. From now on the alias `git-dotfiles` is available for managing this repo.
 
 Optionally, install NodeJS on your system for coc.nvim plugin.
 It is required for IDE-like features (go to definition, rename variable, etc.).
