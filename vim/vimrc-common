@@ -62,6 +62,12 @@ func s:mkdir_if_missing(dir)
     return a:dir
 endfunc
 
+let s:runtime_dir = expand("<sfile>:p:h") .. '/runtime'
+if index(split(&runtimepath, ','), s:runtime_dir) == -1
+    exe $"set runtimepath^={s:runtime_dir}"
+    exe $"set runtimepath+={s:runtime_dir}/after"
+endif
+
 if index(split(&runtimepath, ','), g:default_data_dir .. "/vim") == -1
     exe $"set runtimepath^={g:default_data_dir}/vim"
     exe $"set runtimepath+={g:default_data_dir}/vim/after"
