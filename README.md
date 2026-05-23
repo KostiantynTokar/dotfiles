@@ -23,10 +23,10 @@ git --git-dir=$HOME/dotfiles.git --work-tree=$HOME <command>
 . ~/bashrc-common
 ```
 
-`.gitconfig-common` should be included in global `~/.gitconfig`:
+`gitconfig-common` should be included in global `~/.gitconfig`:
 ```
 [include]
-    path = ~/.gitconfig-common
+    path = ~/gitconfig-common
 ```
 
 `vim/vimrc-common` should be sourced at the end of `~/.vimrc`:
