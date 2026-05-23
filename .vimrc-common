@@ -46,6 +46,7 @@ set backup
 set undofile
 
 let g:default_config_dir = empty($XDG_CONFIG_HOME) ? expand("~/.config")      : expand("$XDG_CONFIG_HOME")
+let g:default_cache_dir  = empty($XDG_CACHE_HOME)  ? expand("~/.cache")       : expand("$XDG_CACHE_HOME")
 let g:default_data_dir   = empty($XDG_DATA_HOME)   ? expand("~/.local/share") : expand("$XDG_DATA_HOME")
 let g:default_state_dir  = empty($XDG_STATE_HOME)  ? expand("~/.local/state") : expand("$XDG_STATE_HOME")
 
