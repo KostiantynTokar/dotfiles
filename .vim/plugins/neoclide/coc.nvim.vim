@@ -159,3 +159,59 @@ nnoremap <silent><nowait> <leader>clj  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <leader>clk  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <leader>clp  :<C-u>CocListResume<CR>
+
+augroup CocConfigOverrides
+    autocmd!
+
+    " All nested settings will only affect Zig files.
+    autocmd User PlugLoaded ++nested call coc#config('[zig]', {
+        \ 'coc.preferences.formatOnSave': 1,
+        \ 'inlayHint.enable': v:false,
+        \ 'semanticTokens.enable': 1,
+        \ })
+
+    " Information on how to configure ZLS: https://zigtools.org/zls/configure/
+    " ZLS build-on-save: https://zigtools.org/zls/guides/build-on-save/
+    autocmd User PlugLoaded ++nested call coc#config('languageserver', {
+        \ 'd': {
+        \     'command': 'serve-d',
+        \     'filetypes': ['d'],
+        \     'trace.server': 'verbose',
+        \     'rootPatterns': ['dub.json', 'dub.sdl'],
+        \     'initializationOptions': {
+        \     },
+        \     'settings': {
+        \     },
+        \ },
+        \ 'zls': {
+        \     'command': 'zls',
+        \     'filetypes': [ 'zig', 'zon' ],
+        \     'settings': {
+        \         'zls.build_on_save_args': ['-fincremental'],
+        \     },
+        \ },
+        \ })
+
+    autocmd User PlugLoaded ++nested call coc#config('inlayHint.enable', v:false)
+
+    autocmd User PlugLoaded ++nested call coc#config('suggest.autoTrigger', 'none')
+    autocmd User PlugLoaded ++nested call coc#config('suggest.noselect', v:false)
+
+    autocmd User PlugLoaded ++nested call coc#config('suggest.floatConfig', {
+        \ 'border': v:true,
+        \ })
+    autocmd User PlugLoaded ++nested call coc#config('diagnostic.floatConfig', {
+        \ 'border': v:true,
+        \ })
+    autocmd User PlugLoaded ++nested call coc#config('signature.floatConfig', {
+        \ 'border': v:true,
+        \ })
+    autocmd User PlugLoaded ++nested call coc#config('hover.floatConfig', {
+        \ 'border': v:true,
+        \ })
+
+    autocmd User PlugLoaded ++nested call coc#config('clangd.arguments', [
+        \ '--clang-tidy',
+        \ '--header-insertion=never',
+        \ ])
+augroup end
