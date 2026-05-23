@@ -29,9 +29,9 @@ git --git-dir=$HOME/dotfiles.git --work-tree=$HOME <command>
     path = ~/.gitconfig-common
 ```
 
-`.vimrc-common` should be sourced at the end of `~/.vimrc`:
+`vim/vimrc-common` should be sourced at the end of `~/.vimrc`:
 ```vim
-source ~/.vimrc-common
+source ~/vim/vimrc-common
 ```
 
 Restart the shell. From now on the alias `git-dotfiles` is available for managing this repo.
