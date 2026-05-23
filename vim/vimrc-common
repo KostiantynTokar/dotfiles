@@ -242,7 +242,7 @@ let g:plugins_dir = expand("<sfile>:p:h") .. '/plugins'
 " :PlugUpdate to update plugins
 " :PlugUpgrade to upgrade Vim-plug
 " :PlugClean to delete plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin(g:default_state_dir .. '/vim/plugged')
 
 execute 'source ' .. g:plugins_dir .. '/chaoren/vim-wordmotion.vim'
 execute 'source ' .. g:plugins_dir .. '/tpope/vim-commentary.vim'
