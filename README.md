@@ -13,14 +13,14 @@ WARNING: this may overwrite your files with the same names.
 git --git-dir=$HOME/dotfiles.git --work-tree=$HOME restore .
 ```
 
-Until you source `.bashrc-common`, you can use git commands on this repo like this:
+Until you source `bashrc-common`, you can use git commands on this repo like this:
 ```bash
 git --git-dir=$HOME/dotfiles.git --work-tree=$HOME <command>
 ```
 
-`.bashrc-common` should be sourced at the end of `~/.bashrc`:
+`bashrc-common` should be sourced at the end of `~/.bashrc`:
 ```bash
-. ~/.bashrc-common
+. ~/bashrc-common
 ```
 
 `.gitconfig-common` should be included in global `~/.gitconfig`:
