@@ -53,3 +53,18 @@ or, in PowerShell (Windows)
 I prefer `FiraMono` font because it is a monospaced font without ligatures.
 
 After installation, open your terminal settings and select the installed font.
+
+## Known Issues
+
+### Vim Ctrl Shortcuts Stop Working
+
+Vim Ctrl shortcuts may stop working after using a Ctrl shortcut the first time. This depends on the terminal.
+
+Some terminals require adding the following lines to your vimrc:
+```vim
+let &t_TI = "\<Esc>[>4;1m"
+let &t_TE = "\<Esc>[>4m"
+```
+Sometimes it should be `4;2` instead of `4;1` for `t_TI`.
+
+See the relevant discussion: https://github.com/vim/vim/issues/9014#issuecomment-996750319.
