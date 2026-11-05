@@ -288,7 +288,6 @@ execute 'source ' .. g:plugins_dir .. '/mengelbrecht/lightline-bufferline.vim'
 execute 'source ' .. g:plugins_dir .. '/itchyny/lightline.vim.vim'
 execute 'source ' .. g:plugins_dir .. '/voldikss/vim-floaterm.vim'
 execute 'source ' .. g:plugins_dir .. '/arp242/auto_mkdir2.vim'
-execute 'source ' .. g:plugins_dir .. '/bfrg/vim-cpp-modern.vim'
 execute 'source ' .. g:plugins_dir .. '/biosugar0/vim-popyank.vim'
 
 execute 'source ' .. g:plugins_dir .. '/ziglang/zig.vim.vim'
