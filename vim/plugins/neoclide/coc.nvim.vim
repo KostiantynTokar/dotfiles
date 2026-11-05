@@ -161,6 +161,10 @@ nnoremap <silent><nowait> <leader>clk  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <leader>clp  :<C-u>CocListResume<CR>
 
+" Mappings for CocCommand
+" Switch between header and implementation file.
+nnoremap <silent><nowait> <leader>cccs :<C-u>CocCommand clangd.switchSourceHeader<CR>
+
 augroup CocConfigOverrides
     autocmd!
 
