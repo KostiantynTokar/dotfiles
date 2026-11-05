@@ -10,4 +10,6 @@ augroup SonokaiOverrides
     " autocmd User PlugLoaded ++nested let g:sonokai_style='espresso'
     autocmd User PlugLoaded ++nested let g:sonokai_disable_italic_comment=1
     autocmd User PlugLoaded ++nested let g:sonokai_better_performance=1
+
+    autocmd! ColorScheme sonokai highlight debugPC term=underline ctermbg=255 guibg=#555555
 augroup end
