@@ -297,8 +297,8 @@ doautocmd User PlugLoaded
 
 " colorscheme dracula
 " colorscheme solarized
-colorscheme PaperColor
+" colorscheme PaperColor
 " colorscheme tokyonight
 " colorscheme everforest
-" colorscheme sonokai
+colorscheme sonokai
 " colorscheme gruvbox
